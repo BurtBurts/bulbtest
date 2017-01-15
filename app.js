@@ -117,4 +117,4 @@ function weatherAlert(){
  setTimeout(weatherAlert(), 5000);
 }
 /* /end weather */
-setTimeout(weatherAlert(), 5000);
+setTimeout(weatherAlert(), 25000);
