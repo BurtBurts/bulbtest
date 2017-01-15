@@ -1,14 +1,7 @@
-var prober=1;
-
 function prober(){
   //checks if somethign changed
-  var r=Math.random() * (254 - 1) + 1;
-  var g=Math.random() * (254 - 1) + 1;
-  var b=Math.random() * (254 - 1) + 1;
-  
-  playbulbCandle.setColor(r, g, b).then(onColorChanged);  
   alert('ran');
-  setTimeout(prober(),5000);
+  setTimeout(prober,5000);
 }
 
 document.querySelector('#connect').addEventListener('click', event => {
