@@ -5,7 +5,8 @@ document.querySelector('#connect').addEventListener('click', event => {
     console.log(playbulbCandle.device);
     document.querySelector('#state').classList.remove('connecting');
     document.querySelector('#state').classList.add('connected');
-    playbulbCandle.setRainbow().then(onColorChanged); /* */
+    /* active so trigger what you want */
+    prober();
     return playbulbCandle.getDeviceName().then(handleDeviceName)
     .then(() => playbulbCandle.getBatteryLevel().then(handleBatteryLevel));
   })
@@ -14,6 +15,11 @@ document.querySelector('#connect').addEventListener('click', event => {
   });
 });
 
+function prober(){
+  //checks if somethign changed
+  //change color to red
+  playbulbCandle.setColor(255, 51, 102).then(onColorChanged);  
+}
 function handleDeviceName(deviceName) {
   document.querySelector('#deviceName').value = deviceName;
 }
