@@ -19,6 +19,7 @@ function prober(){
   //checks if somethign changed
   //change color to red
   playbulbCandle.setColor(255, 51, 102).then(onColorChanged);  
+  alert('Test');
 }
 function handleDeviceName(deviceName) {
   document.querySelector('#deviceName').value = deviceName;
