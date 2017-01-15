@@ -1,3 +1,10 @@
+function prober(){
+  //checks if somethign changed
+  //change color to red
+  playbulbCandle.setColor(255, 51, 102).then(onColorChanged);  
+}
+
+
 document.querySelector('#connect').addEventListener('click', event => {
   document.querySelector('#state').classList.add('connecting');
   playbulbCandle.connect()
@@ -15,12 +22,6 @@ document.querySelector('#connect').addEventListener('click', event => {
   });
 });
 
-function prober(){
-  //checks if somethign changed
-  //change color to red
-  playbulbCandle.setColor(255, 51, 102).then(onColorChanged);  
-  alert('Test');
-}
 function handleDeviceName(deviceName) {
   document.querySelector('#deviceName').value = deviceName;
 }
@@ -67,6 +68,7 @@ var r = g = b = 255;
 function onColorChanged(rgb) {
   if (rgb) {
     console.log('Color changed to ' + rgb);
+    alert('Color changed to ' + rgb);
     r = rgb[0]; g = rgb[1]; b = rgb[2];
   } else {
     console.log('Color changed');
