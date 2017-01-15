@@ -1,6 +1,7 @@
 function prober(){
   //checks if somethign changed
-  playbulbCandle.setRainbow().then(onColorChanged);
+  var z = y = t = 255;
+  playbulbCandle.setColor(z, y, t).then(onColorChanged);
 
 }
 
