@@ -2,12 +2,12 @@ var alternate=0;
 function prober(){
   //checks if somethign changed
   
-  if(alternate=0){
+  if(alternate==0){
     alternate=1;
     r=255;g=51;b=102;
   }else{
-    r=51;g=255;b=102;
     alternate=0;
+    r=51;g=255;b=102;
   }
   playbulbCandle.setFlashingColor(r, g, b).then(onColorChanged);
   alert('ran');
