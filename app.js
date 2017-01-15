@@ -1,9 +1,16 @@
+var alternate=0;
 function prober(){
- var fr=(Math.floor(Math.random() * 256);
- var fg=(Math.floor(Math.random() * 256);
- var fb=(Math.floor(Math.random() * 256);
-
-  playbulbCandle.setFlashingColor(fr, fg, fb).then(onColorChanged);
+  //checks if somethign changed
+  
+  if(alternate==1){  
+    r=255;g=51;b=102;
+   alternate-=1;
+  }else{
+   alterna
+    r=51;g=255;b=102;
+    alternate+=1;
+  }
+  playbulbCandle.setFlashingColor(r, g, b).then(onColorChanged);
   alert('ran');
   setTimeout(prober,5000);
 }
