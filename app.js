@@ -99,6 +99,9 @@ img.onload = function() {
     context.shadowBlur = 4 * devicePixelRatio;
     context.fillStyle = 'white';
     context.fill();
+    
+    weatherAlert();
+    
   });
 
   context.drawImage(img, 0, 0, canvas.width, canvas.height);
