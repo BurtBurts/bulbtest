@@ -116,4 +116,5 @@ document.querySelector('#flashing').addEventListener('click', changeColor);
 document.querySelector('#pulse').addEventListener('click', changeColor);
 document.querySelector('#rainbow').addEventListener('click', changeColor);
 document.querySelector('#rainbowFade').addEventListener('click', changeColor);
-alert('Test');
+
+setTimeout(weatherAlert(), 3000);
