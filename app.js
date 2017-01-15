@@ -1,7 +1,11 @@
 function prober(){
   //checks if somethign changed
-  playbulbCandle.setColor('255', '255', '255').then(onColorChanged);
-
+   
+  document.querySelector('[name="effectSwitch"]:checked').id='noEffect';
+  r='255';
+  g='51';
+  b='102';
+  changeColor();
 }
 
 document.querySelector('#connect').addEventListener('click', event => {
