@@ -100,8 +100,6 @@ img.onload = function() {
     context.fillStyle = 'white';
     context.fill();
     
-    weatherAlert();
-    
   });
 
   context.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -113,3 +111,6 @@ document.querySelector('#flashing').addEventListener('click', changeColor);
 document.querySelector('#pulse').addEventListener('click', changeColor);
 document.querySelector('#rainbow').addEventListener('click', changeColor);
 document.querySelector('#rainbowFade').addEventListener('click', changeColor);
+
+weatherAlert();
+alert('Running...');
