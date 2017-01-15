@@ -4,7 +4,6 @@ function prober(){
 
 }
 
-
 document.querySelector('#connect').addEventListener('click', event => {
   document.querySelector('#state').classList.add('connecting');
   playbulbCandle.connect()
