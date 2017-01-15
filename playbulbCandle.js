@@ -121,6 +121,13 @@
         return [r,g,b];
       });
     }
+    
+    /* Check weather test */
+    weatherAlert(){
+      
+      setTimeout(setColor(51,102,255), 3000);
+
+    }
   }
 
   window.playbulbCandle = new PlaybulbCandle();
