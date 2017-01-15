@@ -32,7 +32,7 @@ function handleDeviceName(deviceName) {
   document.querySelector('#deviceName').value = deviceName;
 }
 
-function handleBatteryLevel(batteryLevel) {
+function handleBatteryLevel(batteryLevel) { //
   document.querySelector('#batteryLevel').textContent = batteryLevel + '%';
 }
 
