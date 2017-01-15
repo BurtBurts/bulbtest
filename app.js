@@ -44,6 +44,11 @@ function changeColor() {
       break;
   }
 }
+/* weather */
+function weatherAlert(){
+  playbulbCandle.setColor("255","51","102").then(onColorChanged);
+}
+/* /end weather */
 
 document.querySelector('#deviceName').addEventListener('input', event => {
   playbulbCandle.setDeviceName(event.target.value)
@@ -111,6 +116,4 @@ document.querySelector('#flashing').addEventListener('click', changeColor);
 document.querySelector('#pulse').addEventListener('click', changeColor);
 document.querySelector('#rainbow').addEventListener('click', changeColor);
 document.querySelector('#rainbowFade').addEventListener('click', changeColor);
-
-weatherAlert();
-alert('Running...');
+alert('Test');
