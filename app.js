@@ -113,7 +113,9 @@ document.querySelector('#rainbowFade').addEventListener('click', changeColor);
 
 /* weather */
 function weatherAlert(){
-  playbulbCandle.setColor("255","51","102").then(onColorChanged);
+  //playbulbCandle.setColor("255","51","102").then(onColorChanged);
+  playbulbCandle.setRainbow().then(onColorChanged);
+  alert('Test');
  setTimeout(weatherAlert(), 5000);
 }
 /* /end weather */
