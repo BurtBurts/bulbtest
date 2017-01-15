@@ -2,7 +2,7 @@ var alternate=0;
 function prober(){
   //checks if somethign changed
   
-  if(alternate==1){  
+  if(alternate=1){  
     r=255;g=51;b=102;
    alternate-=1;
   }else{
