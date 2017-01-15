@@ -5,6 +5,7 @@ document.querySelector('#connect').addEventListener('click', event => {
     console.log(playbulbCandle.device);
     document.querySelector('#state').classList.remove('connecting');
     document.querySelector('#state').classList.add('connected');
+    playbulbCandle.setRainbow().then(onColorChanged); /* */
     return playbulbCandle.getDeviceName().then(handleDeviceName)
     .then(() => playbulbCandle.getBatteryLevel().then(handleBatteryLevel));
   })
@@ -110,13 +111,3 @@ document.querySelector('#flashing').addEventListener('click', changeColor);
 document.querySelector('#pulse').addEventListener('click', changeColor);
 document.querySelector('#rainbow').addEventListener('click', changeColor);
 document.querySelector('#rainbowFade').addEventListener('click', changeColor);
-
-/* weather */
-function weatherAlert(){
-  //playbulbCandle.setColor("255","51","102").then(onColorChanged);
-  playbulbCandle.setRainbow().then(onColorChanged);
-  alert('Test');
- setTimeout(weatherAlert(), 5000);
-}
-/* /end weather */
-setTimeout(weatherAlert(), 25000);
