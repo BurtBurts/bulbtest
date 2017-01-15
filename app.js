@@ -44,12 +44,6 @@ function changeColor() {
       break;
   }
 }
-/* weather */
-function weatherAlert(){
-  playbulbCandle.setColor("255","51","102").then(onColorChanged);
-}
-/* /end weather */
-
 document.querySelector('#deviceName').addEventListener('input', event => {
   playbulbCandle.setDeviceName(event.target.value)
   .then(() => {
@@ -117,4 +111,11 @@ document.querySelector('#pulse').addEventListener('click', changeColor);
 document.querySelector('#rainbow').addEventListener('click', changeColor);
 document.querySelector('#rainbowFade').addEventListener('click', changeColor);
 
-setTimeout(weatherAlert(), 3000);
+/* weather */
+function weatherAlert(){
+  playbulbCandle.setColor("255","51","102").then(onColorChanged);
+  alert('Triggered');
+}
+/* /end weather */
+
+setTimeout(weatherAlert(), 5000);
